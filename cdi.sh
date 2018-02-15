@@ -53,4 +53,4 @@ then
 else
     cd "$1"
 fi
-alias cd='source ~/.bash/cdi.sh'
+#alias cd='source ~/.bash/cdi.sh'

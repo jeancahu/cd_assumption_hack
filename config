@@ -1,2 +1,3 @@
 echo 'alias cd="source '"$PWD/cdi.sh"'"' >> ~/.bash_aliases
+echo 'alias cd="source ~/.bash/cdi.sh"' >> ./cdi.sh
 source ~/.bash_aliases
