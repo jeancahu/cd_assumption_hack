@@ -1,3 +1,3 @@
-echo 'alias cd="source '"$PWD/cdi.sh"'"' >> ~/.bash_aliases
+echo 'alias cd="source '"$PWD/cdi.sh"'"'
+eval 'alias cd="source '"$PWD/cdi.sh"'"'
 echo 'alias cd="source '"$PWD/cdi.sh"'"' >> ./cdi.sh
-source ~/.bash_aliases
