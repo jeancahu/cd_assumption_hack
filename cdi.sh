@@ -21,8 +21,8 @@ then
 	          then
 		            DIR=$( echo $DIR | tr 'A-Z' 'a-z' )
 		            ARRAY="$( /usr/bin/ls -la | grep ^[dl] | sed -e 's/ * /\t /g' | cut -f 9 | sed -e 's/ //g' | tr 'A-Z' 'a-z' )"
-		            POS_DIR=$( echo $ARRAY | tr ' ' '\n' | egrep "^$DIR" )
-		            POS_DIR=$( echo $ARRAY | tr ' ' '\n' | cat -n | egrep "$POS_DIR" )
+		            POS_DIR=$( echo $ARRAY | tr ' ' '\n' | grep -E "^$DIR" )
+		            POS_DIR=$( echo $ARRAY | tr ' ' '\n' | cat -n | grep -E "$POS_DIR" )
 		            cd $( /usr/bin/ls -la | grep ^[dl] | sed -e 's/ * /\t /g' | cut -f 9 | sed -e 's/ //g' | tr ' ' '\n' | head -n $( echo $POS_DIR | cut -f 1 --delimiter=' ' ) | tail -n 1 )
 	          else
 		            cd $ARRAY
